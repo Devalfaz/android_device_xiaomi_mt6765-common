@@ -9,3 +9,7 @@
 
 # RIL
 /system/lib/libmtk-ril\.so u:object_r:vendor_file:s0
+
+# Syfs nodes
+/sys/devices/platform/mtk_disp_mgr.0/rgb u:object_r:livedisplay_sysfs:s0
+
