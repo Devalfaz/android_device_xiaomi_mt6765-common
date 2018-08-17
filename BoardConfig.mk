@@ -100,6 +100,7 @@ BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/configs/seccomp
 # Sepolicy
 include vendor/mediatek/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
