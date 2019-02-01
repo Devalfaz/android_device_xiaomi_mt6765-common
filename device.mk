@@ -171,6 +171,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal_nolimits.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal_nolimits.conf \
     $(LOCAL_PATH)/configs/thermal/thermal_normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal_normal.conf
 
+# Vndk-sp
+PRODUCT_PACKAGES += \
+    vndk_package \
+    vndk-ext
+
 # WLAN
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
