@@ -17,7 +17,7 @@ DEVICE_PATH := device/xiaomi/cactus
 
 # Architecture
 TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
@@ -29,7 +29,7 @@ BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x15000000 --second_offset 0x00f00000 --tags_offset 0x14000000
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x11b00000 --second_offset 0x00f00000 --tags_offset 0x07880000
 TARGET_KERNEL_CONFIG := cactus_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6765
 
