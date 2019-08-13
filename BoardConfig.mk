@@ -97,6 +97,10 @@ VENDOR_SECURITY_PATCH := 2019-07-05
 # Seccomp
 BOARD_SECCOMP_POLICY := $(DEVICE_PATH)/configs/seccomp
 
+# Sepolicy
+include vendor/mediatek/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION := current

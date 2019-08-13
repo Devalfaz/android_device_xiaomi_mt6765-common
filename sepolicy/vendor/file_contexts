@@ -1,0 +1,21 @@
+#########################################
+# Platform dependent label definitions
+#
+
+# define raw block partition label
+
+
+/dev/gps_emi(/.*)? u:object_r:gps_emi_device:s0
+
+
+#############################
+# Default HALs
+#
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerrpint@1\.1-service           u:object_r:hal_fingerprint_default_exec:s0
+#############################
+
+#############################
+# Data files
+#
+/dev/goodix_fp     u:object_r:fingerprint_device:s0
+
