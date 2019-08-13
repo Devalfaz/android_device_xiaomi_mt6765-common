@@ -20,4 +20,39 @@ ifneq ($(filter cactus,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+include $(CLEAR_VARS)
+
+# Firmware
+NVDATA_SYMLINK := $(TARGET_OUT_VENDOR)/nvdata
+$(NVDATA_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating nvdata symlink: $@"
+	$(hide) ln -sf /mnt/vendor/nvdata $@
+
+NVCFG_SYMLINK := $(TARGET_OUT_VENDOR)/nvcfg
+$(NVCFG_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating nvcfg symlink: $@"
+	$(hide) ln -sf /mnt/vendor/nvcfg $@
+
+PROTECT_F_SYMLINK := $(TARGET_OUT_VENDOR)/protect_f
+$(PROTECT_F_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating protect_f symlink: $@"
+	$(hide) ln -sf /mnt/vendor/protect_f $@
+
+PROTECT_S_SYMLINK := $(TARGET_OUT_VENDOR)/protect_s
+$(PROTECT_S_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating protect_s symlink: $@"
+	$(hide) ln -sf /mnt/vendor/protect_s $@
+
+PERSIST_SYMLINK := $(TARGET_OUT_VENDOR)/persist
+$(PERSIST_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating persist symlink: $@"
+	$(hide) ln -sf /mnt/vendor/persist $@
+
+ALL_DEFAULT_INSTALLED_MODULES += \
+    $(NVDATA_SYMLINK) \
+    $(NVCFG_SYMLINK) \
+    $(PROTECT_F_SYMLINK) \
+    $(PROTECT_S_SYMLINK) \
+    $(PERSIST_SYMLINK)
+
 endif
