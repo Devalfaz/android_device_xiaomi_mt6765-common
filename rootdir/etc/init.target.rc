@@ -2,13 +2,14 @@ on boot
     # DT2W
     write /proc/gesture/onoff 1
 
+on post-fs
+    # bind mount libmtk-ril.so
+    mount none /system/lib/libmtk-ril.so /vendor/lib/libmtk-ril.so bind
+
 on init
     # force properties for mtkmal
     setprop persist.mtk_ims_support 0
     setprop persist.mtk_epdg_support 0
-
-    # bind mount libmtk-ril.so
-    mount none /system/lib/libmtk-ril.so /vendor/lib/libmtk-ril.so bind
 
 on property:vold.decrypt=trigger_restart_framework
     setprop persist.mtk_ims_support 0
