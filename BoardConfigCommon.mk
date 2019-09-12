@@ -53,7 +53,6 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT ?= true
   endif
 endif
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
