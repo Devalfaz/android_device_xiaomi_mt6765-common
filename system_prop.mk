@@ -15,3 +15,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.rild.libpath=mtk-ril.so \
     vendor.rild.libargs=-d/dev/ttyC0
+
+# Surfaceflinger
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+   ro.surface_flinger.max_frame_buffer_acquired_buffers=3
