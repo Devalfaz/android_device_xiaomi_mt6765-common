@@ -19,4 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-   ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+   ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+   ro.surface_flinger.vsync_event_phase_offset_ns=8300000 \
+   ro.surface_flinger.vsync_sf_event_phase_offset_ns=830000 \0
+   ro.surface_flinger.present_time_offset_from_vsync_ns=0
