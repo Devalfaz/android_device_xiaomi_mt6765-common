@@ -56,8 +56,7 @@ endif
 
 # Init
 PRODUCT_PACKAGES += \
-    init.target.rc \
-    ueventd.rc
+    init.target.rc
 
 # Input
 PRODUCT_COPY_FILES += \
