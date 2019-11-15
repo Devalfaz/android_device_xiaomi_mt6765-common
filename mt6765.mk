@@ -80,9 +80,6 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
-
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Trust HAL

@@ -79,6 +79,7 @@ TARGET_TAP_TO_WAKE_NODE := /proc/touchpanel/double_tap_enable
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/recovery.fstab

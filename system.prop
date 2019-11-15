@@ -1,0 +1,42 @@
+#
+# from device/xiaomi/mt6765-common/system.prop
+#
+#
+
+# Audio
+audio.chk.cal.spk=0
+audio.chk.cal.us=0
+persist.dirac.acs.controller=afm
+persist.dirac.afm.mode=global
+persist.dirac.acs.storeSettings=1
+persist.dirac.poolsize=2
+persist.dirac.acs.startAtBoot=1
+ro.audio.soundfx.dirac=true
+ro.config.vc_call_vol_steps=7
+ro.config.media_vol_steps=25
+
+# Display
+ro.opengles.version=196610
+ro.sf.lcd_density=320
+qemu.hw.mainkeys=0
+
+# Perf
+ro.mtk_perf_simple_start_win=1
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+ro.sys.fw.bservice_enable=true
+ro.am.reschedule_service=true
+ro.sys.fw.bg_apps_limit=24
+
+# RIL
+vendor.rild.libpath=mtk-ril.so
+vendor.rild.libargs=-d /dev/ttyC0
+
+# WLAN
+mediatek.wlan.ctia=0
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0
+
