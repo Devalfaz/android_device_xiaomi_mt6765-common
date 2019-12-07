@@ -70,6 +70,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.touchscreen.multitouch.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.usb.host.xml \
 
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.2
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
