@@ -1,3 +1,6 @@
+on post-fs
+    mount none /dev/null /vendor/lib/libpdx_default_transport.so bind
+
 on boot
     # DT2W
     chown system system /proc/touchpanel/double_tap_enable
