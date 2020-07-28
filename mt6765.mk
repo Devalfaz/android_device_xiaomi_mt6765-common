@@ -54,6 +54,11 @@ ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml
+
 # Power
 PRODUCT_PACKAGES += \
     power.mt6765
@@ -91,6 +96,13 @@ PRODUCT_PACKAGES += \
 -include $(LOCAL_PATH)/product_prop.mk
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Trust HAL
 PRODUCT_PACKAGES += \
